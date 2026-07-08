@@ -1,3 +1,51 @@
 
 server:
   port: 8010
+
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;MODE=MySQL
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    env:
+      enabled: true
+  endpoint:
+    shutDown:
+      access: unrestricted
+
+eureka:
+  instance:
+    preferIpAddress: true
+
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka/
+
+info:
+  app:
+    name: "accounts-dev"
+    description: "accounts microservice-dev"
+    version: "1.2"
+
+endpoints:
+  shutDown:
+    enabled: true
