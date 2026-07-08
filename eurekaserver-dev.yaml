@@ -9,5 +9,4 @@ eureka:
     registerWithEureka: false
     serviceUrl:
       defaultZone: http://localhost:8090/eureka/
-  server:
-    enable-self-preservation: false
+  
