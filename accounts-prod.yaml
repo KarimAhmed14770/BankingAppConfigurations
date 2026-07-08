@@ -7,3 +7,19 @@ spring:
     url: ${DB_URL}
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
+
+eureka:
+  instance:
+    preferIpAddress: true
+
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8091/eureka/
+
+info:
+  app:
+    name: "accounts-prod"
+    description: "accounts microservice-prod"
+    version: "1.3"
