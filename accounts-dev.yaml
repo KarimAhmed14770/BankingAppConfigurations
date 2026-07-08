@@ -18,17 +18,7 @@ spring:
       ddl-auto: update
     show-sql: true
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  info:
-    env:
-      enabled: true
-  endpoint:
-    shutDown:
-      access: unrestricted
+
 
 eureka:
   instance:
@@ -46,6 +36,3 @@ info:
     description: "accounts microservice-dev"
     version: "1.2"
 
-endpoints:
-  shutDown:
-    enabled: true
