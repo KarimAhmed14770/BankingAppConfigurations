@@ -1,1 +1,10 @@
 
+
+server:
+  port: 8021
+
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
